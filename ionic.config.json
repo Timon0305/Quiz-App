@@ -1,0 +1,7 @@
+{
+  "name": "Formacéo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

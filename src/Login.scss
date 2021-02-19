@@ -1,0 +1,48 @@
+:root { --amplify-primary-color: #be9e56; }
+
+body {
+  position: initial;
+  background-color: #fff;
+  color: #838f97;
+  overflow: initial;
+}
+
+.page-login {
+  & .logo {
+    margin: auto;
+    margin-top: 20px;
+    width: 106px;
+  }
+  & .slogan {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+amplify-authenticator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-top: 50px;
+}
+
+.block-register {
+  margin-bottom: var(--margin-bottom);
+  padding: var(--padding);
+  padding-top: 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  & .register-mandatory { padding: 25px 0; }
+  & ion-item {
+    margin-bottom: 15px;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    & .register-password { font-size: 13px; }
+  }
+  & ion-button {
+    border-radius: 4px;
+    box-shadow: initial;
+    min-height: 49px;
+  }
+}

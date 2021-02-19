@@ -1,0 +1,19 @@
+.page-about {
+  font-size: 14px;
+  & ul {
+    padding-left: 20px;
+    list-style: none;
+    & li {
+      margin-top: 14px;
+      &.no-bullet:before { content: ''; }
+      &:before {
+        content: "\2022";
+        display: inline-block;
+        margin-left: -14px;
+        color: var(--ion-color-primary);
+        font-weight: bold;
+        width: 14px;
+      }
+    }
+  }
+}

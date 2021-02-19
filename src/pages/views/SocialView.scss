@@ -1,0 +1,60 @@
+.page-social {
+  --background: #f5f5f5;
+  & ion-card {
+    margin: 0;
+    margin-top: 20px;
+    border: initial;
+    border-radius: initial;
+    & ion-card-header,
+    & ion-card-content {
+      padding: 10px;
+    }
+    & ion-card-header {
+      & ion-avatar {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    & .social-reactions {
+      & ion-icon,
+      & ion-text {
+        vertical-align: top;
+      }
+      & ion-icon { font-size: 20px; }
+    }
+    & .social-summary {
+      margin-top: 5px;
+      & ion-avatar,
+      & ion-text {
+        vertical-align: middle;
+      }
+      & ion-avatar {
+        display: inline-block;
+        border: 1px solid #fff;
+        margin-right: -6px;
+        width: 20px;
+        height: 20px;
+        &:last-of-type { margin: 0; }
+        & + ion-text { margin: 2px 0 0 5px; }
+      }
+    }
+    & .social-comments {
+      margin-top: 10px;
+      & .block-comment {
+        background: #f5f5f5;
+        border: 1px solid var(--ion-color-light);
+        border-radius: 10px;
+        & ion-badge { margin: 5px 0 0 30px; }
+        & .user-comment {
+          margin-top: -3px;
+          & ion-avatar {
+            margin-top: -2px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+        & .comment { padding: 0 10px 10px; }
+      }
+    }
+  }
+}

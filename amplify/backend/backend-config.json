@@ -1,0 +1,30 @@
+{
+    "auth": {
+        "testappe2fb0b43": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": []
+        },
+        "userPoolGroups": {
+            "service": "Cognito-UserPool-Groups",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "auth",
+                    "resourceName": "testappe2fb0b43",
+                    "attributes": [
+                        "UserPoolId",
+                        "AppClientIDWeb",
+                        "AppClientID"
+                    ]
+                }
+            ]
+        }
+    },
+    "storage": {
+        "s36580d152": {
+            "service": "S3",
+            "providerPlugin": "awscloudformation"
+        }
+    }
+}

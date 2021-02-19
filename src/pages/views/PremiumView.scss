@@ -1,0 +1,37 @@
+.page-premium {
+  & .premium-intro {
+    font-size: 14px;
+    & ion-icon { font-size: 20px; }
+  }
+  & .premium-title ion-badge { margin-top: 2px; }
+  & h5 { margin: 0; }
+  & ion-card {
+    margin-top: 0;
+    & > ion-card-content { padding: 5px; }
+    & ion-card {
+      margin: 0;
+      & ion-col {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    & ion-icon { margin-top: 5px; }
+    & + ion-card { margin-top: 10px; }
+    & ion-button {
+      & ion-icon {
+        margin: 0 3px;
+        font-size: 14px;
+      }
+    }
+  }
+  & .books {
+    display: inline-block;
+    width: 110px;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    list-style-type: initial;
+  }
+}

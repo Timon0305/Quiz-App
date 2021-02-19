@@ -1,0 +1,8 @@
+{
+  "appId": "com.formaceo",
+  "appName": "Formacéo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}

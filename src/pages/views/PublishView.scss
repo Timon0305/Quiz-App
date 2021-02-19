@@ -1,0 +1,17 @@
+.page-publish {
+  & ion-toggle { margin-top: 5px; }
+  & .items-overflow {
+    margin-top: 50px;
+    & ion-card {
+      margin: 0 5px;
+      width: 151px;
+      height: 104px;
+      & .block-import { margin: auto; }
+      & ion-icon { margin: auto; }
+      & ion-icon,
+      & ion-text {
+        display: block;
+      }
+    }
+  }
+}

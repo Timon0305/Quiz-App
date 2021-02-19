@@ -1,0 +1,58 @@
+.page-account {
+  & .block-avatar {
+    margin-top: -90px;
+    & .avatar-default {
+      display: flex;
+      background: var(--ion-color-medium);
+      border: 1px solid #fff;
+      border-radius: 100%;
+      width: 120px;
+      height: 120px;
+      & ion-icon {
+        margin: auto;
+        color: #fff;
+        font-size: 50px;
+      }
+    }
+    & ion-avatar {
+      background: #fff;
+      border: 1px solid #fff;
+      width: 120px;
+      height: 120px;
+    }
+    & .avatar {
+      position: relative;
+      & .add-avatar {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: var(--ion-color-primary);
+        border: 2px solid #fefefe;
+        border-radius: 100%;
+        color: #fefefe;
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        & div { margin: auto; }
+        & ion-icon { font-size: 22px; }
+      }
+    }
+  }
+  & .user-name { margin-top: 10px; }
+  & .account-links {
+    margin-top: 25px;
+    padding: 0;
+    border-top: 1px solid var(--ion-color-light);
+    & ion-item {
+      --padding-start: 0;
+      --inner-padding-end: 0;
+      --min-height: 53px;
+    }
+    & ion-row { width: 100%; }
+    & ion-icon { margin-top: 2px; }
+  }
+  & .block-notifications {
+    & hr { margin: 20px 10px 10px; }
+  }
+}

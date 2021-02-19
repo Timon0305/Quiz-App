@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a0fa88f-c780-461e-bd2a-967708ba1364" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ionic-react-test-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/.config/project-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/testappe2fb0b43/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/testappe2fb0b43/testappe2fb0b43-cloudformation-template.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/userPoolGroups/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/userPoolGroups/template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/userPoolGroups/user-pool-group-precedence.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/storage/s36580d152/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/storage/s36580d152/s3-cloudformation-template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/storage/s36580d152/storage-params.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/capacitor.build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/assets/capacitor.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/formaceo/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-hdpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-hdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-land-hdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-land-ldpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-land-mdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-land-xhdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-land-xxhdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-land-xxxhdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-land/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-ldpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-ldpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-mdpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-mdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-port-hdpi/splash.9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-port-mdpi/splash.9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-port-xhdpi/splash.9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-port-xxhdpi/splash.9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-port-xxxhdpi/splash.9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xhdpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xhdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxhdpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxhdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxxhdpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxxhdpi/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/xml/file_paths.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/capacitor.settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/variables.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capacitor.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ionic.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/AppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-20x20@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-20x20@2x-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-20x20@2x-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-20x20@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-20x20@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-29x29@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-29x29@2x-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-29x29@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-29x29@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-40x40@2x-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-40x40@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-40x40@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-60x60@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-60x60@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-76x76@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-76x76@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-83.5@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Icon-marketing-1024x1024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Image.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/Default@2x~ipad~anyany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/Default@2x~universal~anyany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/Default@3x~iphone~anyany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/App/config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/App/Podfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icon/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icon/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/shapes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/account.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/aide-cake.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/aide-croissants.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/aide-eclairs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/avatar1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/avatar2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/avatar3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/avatar4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/boulangerie.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/classique-farine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/classique-pate-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/classique-pate.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/livres-boulangerie.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/livres-patisserie.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/livres.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/lock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/logo-only.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/mehdi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/pate-choux-big.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/pate-choux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/pate-crepe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/patisserie.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/quiz-environnement.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/quiz-hygiene.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/quiz-levure.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/quiz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/recette.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/recettes-bourdaloue.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/recettes-fraisier.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/recettes-pate.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/slider.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/sos.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/tartare.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/tmp/waving_hand.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/icon/drawable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/android/splash/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-1024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-24@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-27.5@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-44@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-83.5@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-86@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-98@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-2436h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-2436h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@~ipadpro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@~ipadpro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~ipad~anyany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~ipad~comany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone~anyany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone~comany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone~comcom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~universal~anyany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@3x~iphone~anyany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@3x~iphone~anycom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default@3x~iphone~comany.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/splash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aws-exports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ExploreContainer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ExploreContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VideoCarroussel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VideoCarrousselElement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/AboutBakery.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/AboutPastry.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/AboutView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/AboutView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/AccountView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/AccountView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/Cgu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/CgurgpdView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/FormationsView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/HelpView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/HomeView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/HomeView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/InfosView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/NotificationsView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/NullView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/PasswordView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/PremiumView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/PremiumView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/PublishView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/RecipePublishView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/RecipesView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/Rgpd.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/SOSView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/SocialView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/VideoView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/VideosView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/views/VideosView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/serviceWorker.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="272915627">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="TypeScript" value="1" />
+          <entry key="TypeScript JSX" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="TypeScript JSX" value="41" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store.tsx">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1430">
+              <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/views/HomeView.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#240#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/Page.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>email</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/pages/Page.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/HomeView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/PremiumView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/FormationsView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/VideosView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/VideoView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/RecipesView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/RecipePublishView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/AccountView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/InfosView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/PasswordView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/HelpView.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/views/AboutView.tsx" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ionic-react-test-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ionic-react-test-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ionic-react-test-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ionic-react-test-master" type="462c0819:PsiDirectoryNode" />
+              <item name="amplify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ionic-react-test-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ionic-react-test-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="F:\MyExercise\Ionic\formaceo-app-git\ionic-react-test-master\node_modules\eslint" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="F:\MyExercise\Ionic\formaceo-app-git\ionic-react-test-master\node_modules\typescript\lib" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a0fa88f-c780-461e-bd2a-967708ba1364" name="Default Changelist" comment="" />
+      <created>1613734175143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613734175143</updated>
+      <workItem from="1613734177033" duration="602000" />
+      <workItem from="1613738261868" duration="2580000" />
+      <workItem from="1613774071902" duration="804000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3986000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960339" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32912844" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295063" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/shortid/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/HomeView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/PremiumView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="441" column="36" selection-start-line="441" selection-start-column="36" selection-end-line="441" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/FormationsView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/VideosView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="171" column="8" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/VideoView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="132" column="28" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/RecipesView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="182" column="32" selection-start-line="182" selection-start-column="32" selection-end-line="182" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/RecipePublishView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/AccountView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2913">
+          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/InfosView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="154" column="33" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/PasswordView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453">
+          <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/NotificationsView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1144">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/HelpView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/AboutView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/views/NullView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Page.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

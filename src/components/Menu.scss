@@ -1,0 +1,14 @@
+ion-menu {
+  &.md ion-list#inbox-list { border: initial; }
+  & .btn-premium {
+    margin-top: 35px;
+    font-size: 16px;
+  }
+  & ion-list-header ion-label {
+    margin-top: 20px;
+    color: var(--ion-color-medium);
+    font-size: 12px;
+    letter-spacing: 2.2px;
+  }
+  & ion-menu-toggle ion-icon { font-size: 20px; }
+}

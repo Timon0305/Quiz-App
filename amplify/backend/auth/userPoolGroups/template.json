@@ -1,0 +1,55 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "authtestappe2fb0b43UserPoolId": {
+            "Type": "String",
+            "Default": "authtestappe2fb0b43UserPoolId"
+        },
+        
+        "authtestappe2fb0b43AppClientID": {
+            "Type": "String",
+            "Default": "authtestappe2fb0b43AppClientID"
+        },
+        "authtestappe2fb0b43AppClientIDWeb": {
+            "Type": "String",
+            "Default": "authtestappe2fb0b43AppClientIDWeb"
+        },
+        "AuthRoleArn": {
+            "Type": "String"
+        },
+        "UnauthRoleArn": {
+            "Type": "String"
+        },
+        "env": {
+            "Type": "String"
+        }
+    },
+    "Conditions": {
+        "ShouldNotCreateEnvResources": {
+            "Fn::Equals": [
+                {
+                    "Ref": "env"
+                },
+                "NONE"
+            ]
+        }
+    },
+    "Resources": {
+    
+        "testformaceoGroup": {
+          "Type" : "AWS::Cognito::UserPoolGroup",
+          "Properties" : {
+              "GroupName" : "testformaceo",
+              "Precedence" : 1,
+              
+              "UserPoolId" : {
+                "Ref": "authtestappe2fb0b43UserPoolId"
+              } 
+            }
+        },
+        
+    
+    
+    },
+    
+}
