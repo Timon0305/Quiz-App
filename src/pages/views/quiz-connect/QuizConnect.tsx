@@ -7,6 +7,8 @@ import {
     IonItem,
     IonButton,
     IonCardSubtitle,
+    IonProgressBar,
+    IonBadge,
     IonImg,
     IonCard,
     IonCardHeader,
@@ -16,15 +18,15 @@ import {
     IonRouterLink, IonLoading
 } from '@ionic/react';
 import {
-    chevronDownCircle,
-    timeOutline,
-    chevronDownOutline, starOutline, helpCircleOutline,
+    cart, checkboxOutline,
+    checkmarkCircleOutline, checkmarkOutline,
+    chevronDownCircle, chevronDownOutline, closeCircleOutline,
 } from 'ionicons/icons';
 import React, {useEffect} from 'react';
 import {useStore} from 'react-redux';
 import axios from 'axios';
-import QuizList from '../../components/Quiz/QuizList'
-import './QuizView.scss';
+import QuizList from '../../../components/Quiz/QuizList'
+import '../QuizView.scss';
 
 const Page: React.FC = () => {
     const state = useStore().getState();
@@ -41,9 +43,8 @@ const Page: React.FC = () => {
     let [countToDisplay, setCountToDisplay] = React.useState<number>(10);
     let [countTotal, setCountTotal] = React.useState<number>(1);
     let videoCount = 0;
-    let vids = [];
-    let demo = [];
-    let quizUrl = "/Page/Quiz&demo=1";
+    let replay = [];
+    let discover = [];
 
     endpoint += '/listVideoFree';
 
@@ -89,36 +90,50 @@ const Page: React.FC = () => {
             i++
         }
 
-        for (let item in vidByTheme) {
-            const demoQuiz: any = vidByTheme[item];
-            const dId = demoQuiz[0];
-            if (dId) {
-                const url = dId.thumb_url;
-                demo.push(
-                    <IonCard className='pointer' key={item}>
-                        <IonImg src={url}/>
-                        <div className='content'>
-                            <div className='subContent'>
-                                <IonIcon size='large'/>
-                            </div>
-                        </div>
-                    </IonCard>
-                )
-            }
-        }
-
         for (let theme in vidByTheme) {
             const videlmt: any = vidByTheme[theme];
             const vid = videlmt[0];
             videoCount += Object.keys(videlmt).length;
             if (vid) {
                 const url = vid.thumb_url;
-                vids.push(
+                replay.push(
                     <IonCard key={theme}>
                         <IonCardHeader className='p-0'>
                             <IonImg src={url}/>
-                            <div className='content2'>
-                                <div className='subContent2'>
+                            <div className='content4'>
+                                <div className='subContent4'>
+                                    <IonIcon size='large'/>
+                                </div>
+                            </div>
+                        </IonCardHeader>
+                        <IonCardContent className='pt-3'>
+                            <h6 className='text-bold'>La pate a choux</h6>
+                            <IonRow class="ion-align-items-center title-details">
+                                <IonCol class="no-padding-left pt-0">
+                                    <span>4</span>
+                                    &nbsp;
+                                    <span className='vertical-middle'>
+                                         <IonIcon className="checkbox-outline" color="success" icon={checkboxOutline}/> &nbsp;
+                                    </span>
+                                    <span>2</span>
+                                    &nbsp;
+                                    <span className='vertical-middle'>
+                                         <IonIcon className="checkbox-outline" color="danger" icon={closeCircleOutline}/> &nbsp;
+                                    </span>
+                                </IonCol>
+                            </IonRow>
+                        </IonCardContent>
+                    </IonCard>)
+            }
+
+            if (vid) {
+                const url = vid.thumb_url;
+                discover.push(
+                    <IonCard key={theme}>
+                        <IonCardHeader className='p-0'>
+                            <IonImg src={url}/>
+                            <div className='content4'>
+                                <div className='subContent4'>
                                     <IonIcon size='large'/>
                                 </div>
                             </div>
@@ -143,53 +158,50 @@ const Page: React.FC = () => {
 
             <IonGrid>
 
-                <IonRow class="block-intro ion-align-items-center">
-                    <IonCol size="auto">
-                        <IonIcon color="primary" icon={chevronDownCircle}/>
+                <IonRow class="block-intro ion-align-items-center mt-3">
+                    <IonCol size="4">
+                        <IonBadge color="medium" className='light-gray width-100 p-3 badge-round'>
+                            <span className='pr-5'>
+                                <IonIcon className="checkmark-circle-outline" color="success" icon={checkmarkCircleOutline}/>
+                            </span>
+                            <span className='font-14 text-gray'>Patisserie</span>
+                        </IonBadge>
                     </IonCol>
-                    <IonCol>
-                        <IonText className="text-md text-roboto">
-                            Vous pouvez ici testez vos connaissances, lancez-vous avec le quiz proposé !
-                        </IonText>
+                    <IonCol size='8'>
+                        <IonBadge color="medium" className='light-gray width-100 p-3 badge-round'>
+                            <span className='pr-5'>
+                                <IonIcon className="cart" color="primary" icon={cart}/>
+                            </span>
+                            <span className='font-14 text-gray'>Passer au pack premium</span>
+                        </IonBadge>
                     </IonCol>
                 </IonRow>
 
                 <div className="video-resume">
-                    <h5 className='text-bold'>Découvrez votre vidéo gratuite</h5>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonRow>
-                                <IonCol>
-                                    {demo[0]}
-                                </IonCol>
-                            </IonRow>
-                        </IonCardHeader>
-                        <IonCardContent>
-                            <IonRow class="ion-align-items-center">
-                                <IonCol>
-                                    <h4 className='text-bold font-20'>La pate a choux</h4>
-                                    <IonRow class="ion-align-items-center title-details">
-                                        <IonCol class="no-padding-left pt-0">
-                                            <div className="text-sm text-gray">{videoCount} questions</div>
-                                        </IonCol>
-                                    </IonRow>
-                                </IonCol>
-                                <IonCol size="auto">
-                                    <IonButton size="default" href={quizUrl}>Jouer</IonButton>
-                                </IonCol>
-                            </IonRow>
-                        </IonCardContent>
-                    </IonCard>
+                    <div className='ml-3 mr-3'>
+                        <h6 className='text-bold'>Vous avez joué à 22% des Quiz</h6>
+                        <IonProgressBar className='progress-height' color='success' value={0.22}/>
+                    </div>
+                </div>
+                <br/><br/>
+                <div className='video-resume'>
+                    <h5 className='text-bold'>
+                        Rejouer
+                    </h5>
+                    <IonRow>
+                        <IonCol class="items-overflow">
+                            {replay}
+                        </IonCol>
+                    </IonRow>
                 </div>
 
                 <div className='video-resume'>
                     <h5 className='text-bold'>
-                        Découvrez votre vidéo gratuite
-                        <span className="text-sm text-gray ml-3">{videoCount} quiz</span>
+                        Decouvrir
                     </h5>
                     <IonRow>
                         <IonCol class="items-overflow">
-                            {vids}
+                            {discover}
                         </IonCol>
                     </IonRow>
                 </div>
@@ -208,10 +220,6 @@ const Page: React.FC = () => {
                 />
                 {themes}
             </IonList>
-
-            <div className="footer-sticky active ion-text-center">
-                <IonRouterLink color="light" href="/page/Premium">Devenir Premium</IonRouterLink>
-            </div>
 
         </IonContent>
     );

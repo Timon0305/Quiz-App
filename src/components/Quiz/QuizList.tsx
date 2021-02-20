@@ -67,7 +67,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ videos, theme }) => {
                                 </IonCol>
                                 {progressBar}
                             </IonRow>
-                            <IonText className="total-videos text-xs color-medium">{nb} vidéos</IonText>
+                            <IonText className="total-videos text-xs color-medium">{nb} questions</IonText>
                         </IonCol>
                         <IonCol size="auto">
                             <IonIcon className="icon-arrow" color="primary" icon={chevronDownOutline}/>

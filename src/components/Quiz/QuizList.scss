@@ -19,7 +19,37 @@
     background-image: url('/assets/img/group_2.png');
     background-position: center center;
     background-size: cover;
-    width: 28px;
-    height: 20px;
+    width: 20px;
+    height: 17px;
   }
+  & .list-videos {
+    padding-top: 0;
+    border-top: 1px solid var(--ion-color-light);
+    & details {
+      width: 100%;
+      &[open] {
+        & .subContent3 {
+          width: 10px;
+          height: 10px;
+        }
+        & .video-title {
+          font-size: 18px;
+        }
+        & .total-videos {
+          display: none;
+        }
+        & .icon-arrow {
+          margin-top: 5px;
+          font-size: 28px;
+          transform: rotate(180deg);
+        }
+        & .icon-small {
+
+        }
+      }
+    }
+  }
+}
+.page-quiz .list-videos details[open] .video-img {
+
 }

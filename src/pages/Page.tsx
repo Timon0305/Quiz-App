@@ -1,4 +1,14 @@
-import {IonButtons, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonBackButton} from '@ionic/react';
+import {
+    IonButtons,
+    IonHeader,
+    IonButton,
+    IonIcon,
+    IonMenuButton,
+    IonPage,
+    IonTitle,
+    IonToolbar,
+    IonBackButton
+} from '@ionic/react';
 import React from 'react';
 import {useParams} from 'react-router';
 import './Header.scss';
@@ -21,6 +31,8 @@ import SOSView from './views/SOSView'
 import HelpView from './views/HelpView'
 import AboutView from './views/AboutView'
 import QuizView from './views/QuizView'
+import {notificationsOutline} from "ionicons/icons";
+import QuizConnect from './views/quiz-connect/QuizConnect';
 
 const Page: React.FC = () => {
 
@@ -35,7 +47,9 @@ const Page: React.FC = () => {
             case 'Formations':
                 return <FormationsView key={shortid.generate()}/>;
             case 'Quiz':
-                return <QuizView key={shortid.generate()} />;
+                return <QuizView key={shortid.generate()}/>;
+            case 'Quiz&demo=1':
+                return <QuizConnect key={shortid.generate()} />;
             case 'Videos':
                 return <VideosView key={shortid.generate()}/>;
             case 'Video':
@@ -74,6 +88,8 @@ const Page: React.FC = () => {
             case 'Formations':
                 return "Tutoriels vidéos";
             case 'Quiz':
+                return "Quz de formations";
+            case 'Quiz&demo=1':
                 return "Quz de formations";
             case 'Videos':
                 return "Tutoriels vidéos";
@@ -133,14 +149,14 @@ const Page: React.FC = () => {
                     </IonButtons>
 
                     <IonTitle>
-                        <div className="ion-text-center">{title}</div>
+                        <div className="ion-text-center text-bold">{title}</div>
                     </IonTitle>
 
-                    {/* <IonButtons slot="primary">
-            <IonButton>
-              <IonIcon slot="icon-only" icon={notifications}></IonIcon>
-            </IonButton>
-          </IonButtons> */}
+                    <IonButtons slot="primary">
+                        <IonButton>
+                            <IonIcon slot="icon-only" icon={notificationsOutline}/>
+                        </IonButton>
+                    </IonButtons>
 
                 </IonToolbar>
             </IonHeader>
