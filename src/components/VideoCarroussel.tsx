@@ -11,7 +11,7 @@ interface ContainerProps {
 const ExploreContainer: React.FC<ContainerProps> = ({ videos, theme }) => {
     const nb = Object.keys(videos).length;
     let vidElements =[];
-    let thumb = ""
+    let thumb = "";
     let percent = 0;
     let viewed = 0;
     let isRestricted = true;
@@ -31,7 +31,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ videos, theme }) => {
     if (vidElements.length > 0) {
       percent = viewed / vidElements.length
     }
-    let progressBar = <span></span>;
+    let progressBar = <span/>;
     if (!isRestricted) {
       progressBar = <IonCol>
       <IonRow className="ion-align-items-center">
@@ -39,7 +39,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ videos, theme }) => {
           <IonText className="text-xs color-medium">{Math.ceil(percent * 100)}%</IonText>
         </IonCol>
         <IonCol>
-          <IonProgressBar color="success" value={percent}></IonProgressBar>
+          <IonProgressBar color="success" value={percent}/>
         </IonCol>
       </IonRow>
     </IonCol>
@@ -64,7 +64,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ videos, theme }) => {
             <IonText className="total-videos text-xs color-medium">{nb} vidéos</IonText>
           </IonCol>
           <IonCol size="auto">
-            <IonIcon className="icon-arrow" color="primary" icon={chevronDownOutline}></IonIcon>
+            <IonIcon className="icon-arrow" color="primary" icon={chevronDownOutline}/>
           </IonCol>
         </IonRow>
       </summary>

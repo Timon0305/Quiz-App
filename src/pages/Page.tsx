@@ -20,6 +20,7 @@ import CgurgpdView from './views/CgurgpdView'
 import SOSView from './views/SOSView'
 import HelpView from './views/HelpView'
 import AboutView from './views/AboutView'
+import QuizView from './views/QuizView'
 
 const Page: React.FC = () => {
 
@@ -33,6 +34,8 @@ const Page: React.FC = () => {
                 return <PremiumView key={shortid.generate()}/>;
             case 'Formations':
                 return <FormationsView key={shortid.generate()}/>;
+            case 'Quiz':
+                return <QuizView key={shortid.generate()} />;
             case 'Videos':
                 return <VideosView key={shortid.generate()}/>;
             case 'Video':
@@ -70,6 +73,8 @@ const Page: React.FC = () => {
                 return "Devenir premium";
             case 'Formations':
                 return "Tutoriels vidéos";
+            case 'Quiz':
+                return "Quz de formations";
             case 'Videos':
                 return "Tutoriels vidéos";
             case 'Video':
