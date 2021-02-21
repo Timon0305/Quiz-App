@@ -33,7 +33,6 @@
     background-image: url('/assets/tmp/test-blank.png');
     background-position: center center;
     background-size: cover;
-    opacity: 0.8;
     font-size: 14px;
     width: 100%;
     height: 80vh;
@@ -46,8 +45,8 @@
     background-color: white;
   }
   & .test-card-content {
-    margin-bottom: 20px;
-    margin-top: 8px;
+    margin-bottom: 25px;
+    margin-top: 10px;
     margin-left: 3px;
     margin-right: 3px;
   }
@@ -59,9 +58,32 @@
   .checkbox-square > svg {
     border-radius: 0!important;
   }
+  & .progress-height {
+    height: 8px;
+  }
+  & .test-card-result {
+    margin-top: 30px;
+    margin-bottom: 28px;
+  }
+  & .pink-orange {
+    background-color: #ff9966!important;
+  }
+  .pink-orange::before {
+    background-color: #f8f8f8!important;
+  }
+  .progress {
+    background-color: #ff9966!important;
+  }
   .pointer {
     cursor: pointer;
   }
+  .mb-51 {
+    margin-bottom: 51px;
+  }
+  .mt-20 {
+    margin-top: 20px;
+  }
+
   & h5 {
     margin: 0;
     margin-left: 5px;
@@ -82,7 +104,9 @@
       }
     }
   }
-
+  .button-wall {
+    border-right: 1px solid #e5e5e5;
+  }
   & ion-card-content {
     padding: 5px 10px !important;
   }

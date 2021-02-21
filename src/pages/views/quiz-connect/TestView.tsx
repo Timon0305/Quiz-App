@@ -26,11 +26,12 @@ import {useParams} from 'react-router';
 import './QuizConnect.scss';
 import {useStore} from 'react-redux';
 import axios from 'axios';
+import {QuizResult1} from './QuizResult1';
 
 const secondList = [
-    {val: 'Pepperoni', isChecked: false},
-    {val: 'Sausage', isChecked: false},
-    {val: 'Mushroom', isChecked: false}
+    {val: 'Brune', isChecked: false},
+    {val: 'Rouge', isChecked: false},
+    {val: 'Noire', isChecked: false}
 ];
 
 const thirdList = [
@@ -68,6 +69,7 @@ const Page: React.FC = () => {
         }
     }
 
+
     function querySecond(e: any) {
         let toggledTrue = false;
         for (let item of thirdList) {
@@ -93,6 +95,7 @@ const Page: React.FC = () => {
     let welcomeMsg =
         <IonCol class="slider ion-text-center"/>;
 
+    // @ts-ignore
     let secondScreen =
         <IonCol class='test-back'>
             <IonCard className='test-card'>
@@ -115,7 +118,7 @@ const Page: React.FC = () => {
                     </IonRow>
                 </IonCardHeader>
 
-                <IonCardContent className='test-card-content'>
+                <IonCardContent className='test-card-content ion-text-center'>
                     <IonText className='text-bold'>Quel est le nom officiel de la plante de vanille la plus répandue en
                         gastronomie ? </IonText>
                 </IonCardContent>
@@ -134,7 +137,7 @@ const Page: React.FC = () => {
                                 />
                             </IonCol>
                             <IonCol>
-                                <IonText id={val} className="text-md text-roboto font-16 text-bold">
+                                <IonText className="text-md text-roboto font-16 text-bold">
                                     {val}
                                 </IonText>
                             </IonCol>
@@ -175,7 +178,7 @@ const Page: React.FC = () => {
                     </IonRow>
                 </IonCardHeader>
 
-                <IonCardContent className='test-card-content'>
+                <IonCardContent className='test-card-content ion-text-center'>
                     <IonText className='text-bold'>Quelle gousse de vanille est la plus rare ?  </IonText>
                 </IonCardContent>
             </IonCard>
@@ -204,7 +207,7 @@ const Page: React.FC = () => {
             </IonGrid>
             {isSecondCheck ?
                 <div className="footer-sticky active ion-text-center pointer">
-                    <IonText color="light" onClick={() => setScreen(2)}>Terminer le quiz</IonText>
+                    <IonText color="light" onClick={() => setScreen(3)}>Terminer le quiz</IonText>
                 </div> :
                 <div className="footer-sticky ion-text-center pointer">
                     <IonText color="primary">Terminer le quiz</IonText>
@@ -237,11 +240,15 @@ const Page: React.FC = () => {
                 <IonRow>
                     {secondScreen}
                 </IonRow> :
-                <IonRow>
-                    {thirdScreen}
-                </IonRow>
+                screen === 2 ?
+                    <IonRow>
+                        {thirdScreen}
+                    </IonRow>
+                    :
+                    <IonRow>
+                        {QuizResult1}
+                    </IonRow>
             }
-
         </IonContent>
     );
 };
