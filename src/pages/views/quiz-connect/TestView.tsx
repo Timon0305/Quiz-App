@@ -112,8 +112,9 @@ const Page: React.FC = () => {
                             </IonRow>
                         </IonCol>
                         <IonCol size="auto">
-                            <IonIcon size="small" color='warning' icon={happyOutline}/>
-                            <IonIcon size="small" color='danger' icon={heartSharp}/>
+                            <span className='pr-3'>😀</span>
+                            <span className='pr-3'>❤️</span>
+                            <span className='pr-3'>❤️</span>
                         </IonCol>
                     </IonRow>
                 </IonCardHeader>
