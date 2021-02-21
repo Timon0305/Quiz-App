@@ -9,6 +9,7 @@ import {
     IonToolbar,
     IonBackButton
 } from '@ionic/react';
+import {notificationsOutline} from "ionicons/icons";
 import React from 'react';
 import {useParams} from 'react-router';
 import './Header.scss';
@@ -31,8 +32,8 @@ import SOSView from './views/SOSView'
 import HelpView from './views/HelpView'
 import AboutView from './views/AboutView'
 import QuizView from './views/QuizView'
-import {notificationsOutline} from "ionicons/icons";
 import QuizConnect from './views/quiz-connect/QuizConnect';
+import TestView from './views/quiz-connect/TestView';
 
 const Page: React.FC = () => {
 
@@ -50,6 +51,8 @@ const Page: React.FC = () => {
                 return <QuizView key={shortid.generate()}/>;
             case 'Quiz&demo=1':
                 return <QuizConnect key={shortid.generate()} />;
+            case 'Quiz&test':
+                return <TestView key={shortid.generate()} />;
             case 'Videos':
                 return <VideosView key={shortid.generate()}/>;
             case 'Video':
@@ -90,6 +93,8 @@ const Page: React.FC = () => {
             case 'Quiz':
                 return "Quz de formations";
             case 'Quiz&demo=1':
+                return "Quz de formations";
+            case 'Quiz&test':
                 return "Quz de formations";
             case 'Videos':
                 return "Tutoriels vidéos";
@@ -154,7 +159,7 @@ const Page: React.FC = () => {
 
                     <IonButtons slot="primary">
                         <IonButton>
-                            <IonIcon slot="icon-only" icon={notificationsOutline}/>
+                            <IonIcon slot="icon-only" color='light' icon={notificationsOutline}/>
                         </IonButton>
                     </IonButtons>
 

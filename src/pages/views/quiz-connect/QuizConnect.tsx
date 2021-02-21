@@ -45,6 +45,7 @@ const Page: React.FC = () => {
     let videoCount = 0;
     let replay = [];
     let discover = [];
+    let startQuiz = 'Page/Quiz&test';
 
     endpoint += '/listVideoFree';
 
@@ -97,7 +98,7 @@ const Page: React.FC = () => {
             if (vid) {
                 const url = vid.thumb_url;
                 replay.push(
-                    <IonCard key={theme}>
+                    <IonCard key={theme} className='pointer' href={startQuiz}>
                         <IonCardHeader className='p-0'>
                             <IonImg src={url}/>
                             <div className='content4'>
@@ -129,7 +130,7 @@ const Page: React.FC = () => {
             if (vid) {
                 const url = vid.thumb_url;
                 discover.push(
-                    <IonCard key={theme}>
+                    <IonCard key={theme} className='pointer'>
                         <IonCardHeader className='p-0'>
                             <IonImg src={url}/>
                             <div className='content4'>
