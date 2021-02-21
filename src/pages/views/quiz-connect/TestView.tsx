@@ -27,6 +27,8 @@ import './QuizConnect.scss';
 import {useStore} from 'react-redux';
 import axios from 'axios';
 import {QuizResult1} from './QuizResult1';
+import {QuizCongrat} from "./Quiz-Congrat";
+import {QuizBad} from "./QuizBad";
 
 const secondList = [
     {val: 'Brune', isChecked: false},
@@ -173,8 +175,9 @@ const Page: React.FC = () => {
                             </IonRow>
                         </IonCol>
                         <IonCol size="auto">
-                            <IonIcon size="small" color='warning' icon={happyOutline}/>
-                            <IonIcon size="small" color='danger' icon={heartSharp}/>
+                            <span className='pr-3'>😀</span>
+                            <span className='pr-3'>❤️</span>
+                            <span className='pr-3'>❤️</span>
                         </IonCol>
                     </IonRow>
                 </IonCardHeader>
@@ -247,7 +250,7 @@ const Page: React.FC = () => {
                     </IonRow>
                     :
                     <IonRow>
-                        {QuizResult1}
+                        {QuizBad}
                     </IonRow>
             }
         </IonContent>
