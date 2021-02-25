@@ -93,13 +93,14 @@ const Page: React.FC = () => {
             i++;
         }
         themes.push(
-            <QuizList quiz = {dashboard.children} key={'1'}/>
+            <QuizList quiz={dashboard.children} key={'1'}/>
         );
     }
 
     return (
         <IonContent class="page-quiz page-footer" scrollEvents={true} onIonScrollEnd={e => {
-            setCountToDisplay(countToDisplay + 10)}}>
+            setCountToDisplay(countToDisplay + 10)
+        }}>
             <IonGrid>
                 <IonRow class="block-intro ion-align-items-center">
                     <IonCol size="auto">
