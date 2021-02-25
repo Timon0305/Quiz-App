@@ -32,7 +32,7 @@ const Page: React.FC = () => {
 
     let [promiseResolved, setPromiseResolved] = React.useState(false);
     let [countToDisplay, setCountToDisplay] = React.useState<number>(10);
-    let [dashboard, setDashboard] = React.useState([]);
+    let [dashboard, setDashboard] = React.useState<any>();
     let [countTotal, setCountTotal] = React.useState<number>(1);
     let [quizCount, setQuizCount] = React.useState(0);
     let quizParentList = [];
@@ -42,6 +42,12 @@ const Page: React.FC = () => {
     useEffect(() => {
         setPromiseResolved(true);
         setQuizCount(quizData.length);
+
+        for (let item of quizData) {
+            if (!item.image) {
+                item.image = '/assets/tmp/sos.jpg'
+            }
+        }
         setDashboard(quizData[0]);
         setCountTotal(quizData.length);
     }, []);
@@ -55,7 +61,7 @@ const Page: React.FC = () => {
                 childData.image = '/assets/tmp/sos.jpg'
             }
             quizParentList.push(
-                <IonCard key={theme} className='pointer'>
+                <IonCard key={theme} className='pointer' onClick={() => setDashboard(childData)}>
                     <IonCardHeader className='p-0'>
                         <IonImg src={childData.image}/>
                         <div className='content2'>
@@ -78,19 +84,19 @@ const Page: React.FC = () => {
 
         // Quiz Sub List
         let i = 0;
-        for (let item in quizData) {
-            if (!quizData[item].image) {
-                quizData[item].image = '/assets/tmp/tartare.jpg'
+        for (let item in dashboard.children) {
+            let subList = dashboard.children[item];
+            if (!subList.image) {
+                subList.image = '/assets/tmp/tartare.jpg'
             }
             if (i >= countToDisplay) break;
             i++;
         }
         themes.push(
-            <QuizList quiz = {quizData} key={'1'}/>
+            <QuizList quiz = {dashboard.children} key={'1'}/>
         );
     }
 
-    // @ts-ignore
     return (
         <IonContent class="page-quiz page-footer" scrollEvents={true} onIonScrollEnd={e => {
             setCountToDisplay(countToDisplay + 10)}}>

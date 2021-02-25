@@ -31,6 +31,7 @@ function display()
             user.endpoint = "https://mtsqmmjcs3.execute-api.eu-central-1.amazonaws.com/dev";
             user.apiKey = "4hCTz2V9DW1W8rpeIk9r4v8lGKrQXOC4GdwZpXUi";
             user.quizApi = 'http://15.188.52.134/api/recursive?parent_id=0';
+            user.publicUrl = 'http://15.188.52.134/';
             user.quiz = [
                 {
                     "id": 2,

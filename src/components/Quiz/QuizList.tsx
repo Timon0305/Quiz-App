@@ -5,17 +5,20 @@ import QuizElement from './QuizElement';
 import './QuizList.scss'
 
 interface ContainerProps {
-    quiz: [];
+    quiz: any;
 }
 
 const ExploreContainer: React.FC<ContainerProps> = ({ quiz }) => {
-    let quizElements = [];
     let parentQuiz = [];
     for (let quizId in quiz) {
-        const quizElement = quiz[quizId];
+        let quizElements: any = [];
+        let quizElement = quiz[quizId];
+        let elementChildren = quiz[quizId].children;
+
         quizElements.push(
-            <QuizElement cateQuiz={quizElement} key={quizId} />
+            <QuizElement cateQuiz={elementChildren} key={quizId} pid={quiz[quizId].id} />
         );
+
         parentQuiz.push(
             <IonItem className='quiz-list' key={quizId}>
                 <details>
