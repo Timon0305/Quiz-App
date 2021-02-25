@@ -5,82 +5,59 @@ import QuizElement from './QuizElement';
 import './QuizList.scss'
 
 interface ContainerProps {
-    videos: [];
-    theme: string;
+    quiz: [];
 }
 
-const ExploreContainer: React.FC<ContainerProps> = ({ videos, theme }) => {
-    const nb = Object.keys(videos).length;
-    let vidElements =[];
-    let thumb = "";
-    let percent = 0;
-    let viewed = 0;
-    let isRestricted = true;
-    for (let vid in videos) {
-        const videlmt = videos[vid];
-        if (isRestricted && videlmt["video_url"]) {
-            isRestricted = false;
-        }
-        if (thumb == "") {
-            thumb = videlmt["thumb_url"]
-        }
-        if (videlmt["user_aws_id"]) {
-            viewed++
-        }
-        vidElements.push(<QuizElement video={videlmt} key={vid} />)
-    }
-    if (vidElements.length > 0) {
-        percent = viewed / vidElements.length
-    }
-    let progressBar = <span/>;
-    if (!isRestricted) {
-        progressBar = <IonCol>
-            <IonRow className="ion-align-items-center">
-                <IonCol size="auto">
-                    <IonText className="text-xs color-medium">{Math.ceil(percent * 100)}%</IonText>
-                </IonCol>
-                <IonCol>
-                    <IonProgressBar color="success" value={percent}/>
-                </IonCol>
-            </IonRow>
-        </IonCol>
-    }
-    return (
-        <IonItem className='quiz-list'>
-            <details>
-                <summary>
-                    <IonRow className="ion-align-items-center">
-                        <IonCol className="no-padding-left m-5 p-0" size="auto">
-                            <IonImg className="video-img quiz-img" src={thumb}/>
-                            <div className='content3'>
-                                <div className='subContent3'>
-                                    <IonIcon size='small'/>
+const ExploreContainer: React.FC<ContainerProps> = ({ quiz }) => {
+    let quizElements = [];
+    let parentQuiz = [];
+    for (let quizId in quiz) {
+        const quizElement = quiz[quizId];
+        quizElements.push(
+            <QuizElement cateQuiz={quizElement} key={quizId} />
+        );
+        parentQuiz.push(
+            <IonItem className='quiz-list' key={quizId}>
+                <details>
+                    <summary>
+                        <IonRow className="ion-align-items-center">
+                            <IonCol className="no-padding-left m-5 p-0" size="auto">
+                                <IonImg className="video-img quiz-img" />
+                                <div className='content3'>
+                                    <div className='subContent3'>
+                                        <IonIcon size='small'/>
+                                    </div>
                                 </div>
-                            </div>
-                        </IonCol>
+                            </IonCol>
+                            <IonCol>
+                                <IonRow className="video-details ion-align-items-center">
+                                    <IonCol size="auto">
+                                        <IonText className="video-title text-md">
+                                            <b>{quizElement['title']}</b>
+                                        </IonText>
+                                    </IonCol>
+                                </IonRow>
+                                <IonText className="total-videos text-xs color-medium">{quizElement['child_count']} questions</IonText>
+                            </IonCol>
+                            <IonCol size="auto">
+                                <IonIcon className="icon-arrow" color="primary" icon={chevronDownOutline}/>
+                            </IonCol>
+                        </IonRow>
+                    </summary>
+                    <IonRow class="items-overflow">
                         <IonCol>
-                            <IonRow className="video-details ion-align-items-center">
-                                <IonCol size="auto">
-                                    <IonText className="video-title text-md">
-                                        <b>{theme}</b>
-                                    </IonText>
-                                </IonCol>
-                                {progressBar}
-                            </IonRow>
-                            <IonText className="total-videos text-xs color-medium">{nb} questions</IonText>
-                        </IonCol>
-                        <IonCol size="auto">
-                            <IonIcon className="icon-arrow" color="primary" icon={chevronDownOutline}/>
+                            {quizElements}
                         </IonCol>
                     </IonRow>
-                </summary>
-                <IonRow class="items-overflow">
-                    <IonCol>
-                        {vidElements}
-                    </IonCol>
-                </IonRow>
-            </details>
-        </IonItem>
+                </details>
+            </IonItem>
+        )
+    }
+
+    return (
+        <>
+            {parentQuiz}
+        </>
     );
 };
 

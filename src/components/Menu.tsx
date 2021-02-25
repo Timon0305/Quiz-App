@@ -10,7 +10,7 @@ import {
     IonButton,
     IonText,
 } from '@ionic/react';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {
     starOutline,
@@ -24,7 +24,7 @@ import {
     readerOutline,
     personCircleOutline,
     personAddOutline,
-    bookOutline
+    bookOutline, trendingUpOutline
 } from 'ionicons/icons';
 import './Menu.css';
 import './Menu.scss';
@@ -95,6 +95,8 @@ const Menu: React.FC = () => {
     const state = useStore().getState();
     let [videoListUrl, setVideoListUrl] = React.useState("/Page/Formations");
     let [quizListUrl, setQuizListUrl] = React.useState("/Page/Quiz");
+    let [testUrl, setTestUrl] = React.useState('/Page/Test');
+    let quizData = state.quiz;
 
     const trainingPages: TrainingPage[] = [
         {
@@ -110,10 +112,16 @@ const Menu: React.FC = () => {
             mdIcon: videocamOutline
         },
         {
-            title: 'Quiz de formations',
+            title: 'Quiz de formations (theme)',
             url: quizListUrl,
             iosIcon: constructOutline,
             mdIcon: constructOutline
+        },
+        {
+            title: 'Quiz de formations (exam)',
+            url: testUrl,
+            iosIcon: trendingUpOutline,
+            mdIcon: trendingUpOutline
         }
         // {
         //   title: 'Recettes favorites',

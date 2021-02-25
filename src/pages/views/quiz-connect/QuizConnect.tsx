@@ -87,7 +87,7 @@ const Page: React.FC = () => {
                 break;
             }
             const videlmt = vidByTheme[theme];
-            themes.push(<QuizList videos={videlmt} key={theme} theme={theme}/>);
+            themes.push(<QuizList quiz={videlmt} key={theme}/>);
             i++
         }
 

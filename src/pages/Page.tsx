@@ -10,7 +10,7 @@ import {
     IonBackButton
 } from '@ionic/react';
 import {notificationsOutline} from "ionicons/icons";
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useParams} from 'react-router';
 import './Header.scss';
 import './Page.scss';
@@ -38,6 +38,12 @@ import TestView from './views/quiz-connect/TestView';
 const Page: React.FC = () => {
 
     const {name} = useParams<{ name: string; }>();
+    const _isMounted = useRef(true);
+    useEffect(() => {
+        return () => {
+            _isMounted.current = false;
+        }
+    }, []);
 
     const componentLoader = (name: string) => {
         switch (name) {

@@ -30,6 +30,7 @@ const Page: React.FC = () => {
     const state = useStore().getState();
 
     let endpoint = state.endpoint;
+    let quizData = state.quiz;
 
     interface StringMap {
         [key: string]: [];
@@ -75,19 +76,19 @@ const Page: React.FC = () => {
 
             return vidByTheme;
         })
-    });
+    }, []);
 
     let themes = [];
     if (promiseResolved) {
         let i = 0;
-        for (let theme in vidByTheme) {
-            if (i >= countToDisplay) {
-                break;
+        for (let item in quizData) {
+            if (!quizData[item].image) {
+                quizData[item].image = '/assets/tmp/tartare.jpg'
             }
-            const videlmt = vidByTheme[theme];
-            themes.push(<QuizList videos={videlmt} key={theme} theme={theme}/>);
-            i++
+            if (i >= countToDisplay) break;
+            i++;
         }
+        themes.push(<QuizList quiz = {quizData} key={'1'}/>);
 
         for (let item in vidByTheme) {
             const demoQuiz: any = vidByTheme[item];
