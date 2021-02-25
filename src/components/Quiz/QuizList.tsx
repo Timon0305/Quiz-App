@@ -22,7 +22,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ quiz }) => {
                     <summary>
                         <IonRow className="ion-align-items-center">
                             <IonCol className="no-padding-left m-5 p-0" size="auto">
-                                <IonImg className="video-img quiz-img" />
+                                <IonImg className="video-img quiz-img" src={quizElement['image']} />
                                 <div className='content3'>
                                     <div className='subContent3'>
                                         <IonIcon size='small'/>
