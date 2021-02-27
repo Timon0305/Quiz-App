@@ -24,8 +24,9 @@ import {
     readerOutline,
     personCircleOutline,
     personAddOutline,
-    bookOutline, trendingUpOutline
+    bookOutline, trendingUpOutline, train
 } from 'ionicons/icons';
+import axios from 'axios';
 import './Menu.css';
 import './Menu.scss';
 
@@ -95,10 +96,8 @@ const Menu: React.FC = () => {
     const state = useStore().getState();
     let [videoListUrl, setVideoListUrl] = React.useState("/Page/Formations");
     let [quizListUrl, setQuizListUrl] = React.useState("/Page/Quiz");
-    let [testUrl, setTestUrl] = React.useState('/Page/Test');
-    let quizData = state.quiz;
-
-    const trainingPages: TrainingPage[] = [
+    let [quizTestUrl, setQuizTestUrl] = React.useState("/Page/Test");
+    let [trainingPages, setTrainingPages] = React.useState<TrainingPage[]>([
         {
             title: 'Accueil',
             url: '/page/Home',
@@ -110,62 +109,60 @@ const Menu: React.FC = () => {
             url: videoListUrl,
             iosIcon: videocamOutline,
             mdIcon: videocamOutline
-        },
-        {
-            title: 'Quiz de formations (theme)',
-            url: quizListUrl,
-            iosIcon: constructOutline,
-            mdIcon: constructOutline
-        },
-        {
-            title: 'Quiz de formations (exam)',
-            url: testUrl,
-            iosIcon: trendingUpOutline,
-            mdIcon: trendingUpOutline
+        }]);
+    // let quizApi = state.quizApi;
+    let quizData = state.quiz;
+    let navigators: TrainingPage[] = [];
+    let [selectedTheme, setSelectedTheme] = React.useState<any>();
+
+    useEffect(() => {
+        for (let item of trainingPages) {
+            navigators.push(item)
         }
-        // {
-        //   title: 'Recettes favorites',
-        //   url: '/page/Recipes',
-        //   iosIcon: medalOutline,
-        //   mdIcon: medalOutline
-        // },
-        // {
-        //   title: 'Carnet de recette',
-        //   url: '/page/',
-        //   iosIcon: createOutline,
-        //   mdIcon: createOutline
-        // },
-        // {
-        //   title: 'Quiz de formations',
-        //   url: '/page/Jeux',
-        //   iosIcon: helpCircleOutline,
-        //   mdIcon: helpCircleOutline
-        // }
-    ];
+        for (let i = 0; i < quizData.length; i++) {
+            if (i === 0) quizData[0].url = quizListUrl; else quizData[1].url = quizTestUrl;
+            if (i === 0) quizData[0].iosIcon = constructOutline; else quizData[1].iosIcon = trendingUpOutline;
+            if (i === 0) quizData[0].mdIcon = constructOutline; else quizData[1].mdIcon = trendingUpOutline;
+            navigators.push(quizData[i])
+        }
+        setTrainingPages(navigators);
+
+    }, []);
 
     let button = <IonButton class="btn-premium" expand="block" fill="outline" href="/page/Premium">
         <IonIcon icon={starOutline}/>
         <IonText class="ion-margin-start">Passer Premium</IonText>
     </IonButton>;
+
     if (state.premium.boulangerie || state.premium.patisserie) {
         button = <span/>;
         if (videoListUrl != "/Page/Videos") {
             setVideoListUrl("/Page/Videos")
         }
     }
+
+    if (selectedTheme === undefined) {
+        let url = window.location.pathname;
+        for (let item of trainingPages) {
+            if (item.url === url) {
+                setSelectedTheme(item);
+            }
+        }
+    }
+
     return (
         <IonMenu contentId="main" type="overlay">
             <IonContent>
                 {button}
-
                 <IonList id="inbox-list" lines="full">
 
                     <IonListHeader>
                         <IonLabel class="ion-text-uppercase">Ma formation</IonLabel>
                     </IonListHeader>
+
                     {trainingPages.map((trainingPage, index) => {
                         return (
-                            <IonMenuToggle key={index} autoHide={false}>
+                            <IonMenuToggle key={index} autoHide={false} onClick={() => setSelectedTheme(trainingPage)}>
                                 <IonItem className={location.pathname === trainingPage.url ? 'selected' : ''}
                                          routerLink={trainingPage.url} routerDirection="none" lines="none"
                                          detail={false}>
@@ -175,20 +172,6 @@ const Menu: React.FC = () => {
                             </IonMenuToggle>
                         );
                     })}
-
-                    {/* <IonListHeader>
-            <IonLabel class="ion-text-uppercase">Aide</IonLabel>
-          </IonListHeader>
-          {helpPages.map((helpPage, index) => {
-            return (
-              <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === helpPage.url ? 'selected' : ''} routerLink={helpPage.url} routerDirection="none" lines="none" detail={false}>
-                  <IonIcon slot="start" ios={helpPage.iosIcon} md={helpPage.mdIcon} />
-                  <IonLabel>{helpPage.title}</IonLabel>
-                </IonItem>
-              </IonMenuToggle>
-            );
-          })} */}
 
                     <IonListHeader>
                         <IonLabel class="ion-text-uppercase">Formaceo et moi</IonLabel>

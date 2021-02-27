@@ -98,6 +98,8 @@ const Page: React.FC = () => {
                 return "Tutoriels vidéos";
             case 'Quiz':
                 return "Quz de formations";
+            case 'Test':
+                return "Quz de formations";
             case 'Quiz&demo=1':
                 return "Quz de formations";
             case 'Quiz&test':
