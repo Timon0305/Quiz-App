@@ -50,6 +50,7 @@ const Page: React.FC = () => {
         }
         setDashboard(quizData[0]);
         setCountTotal(quizData.length);
+        console.log(state, 'quiz view page =>>>>>>>>....')
     }, []);
 
 

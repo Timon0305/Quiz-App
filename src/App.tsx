@@ -23,23 +23,23 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-
 const App: React.FC = (data: Object) => {
 
   return (
-    <IonApp>
-      <IonReactRouter>
-        <IonSplitPane contentId="main">
-          <Menu />
-          <IonRouterOutlet id="main">
-            <Route path="/page/:name" component={Page} exact />
-            <Route path="/video/:name/:id" component={Page} exact />
-            <Redirect from="/" to="/page/Home" exact />
-          </IonRouterOutlet>
-        </IonSplitPane>
-      </IonReactRouter>
-    </IonApp>
+      <IonApp>
+          <IonReactRouter>
+              <IonSplitPane contentId="main">
+                  <Menu />
+                  <IonRouterOutlet id="main">
+                      <Route path="/page/:name" component={Page} exact />
+                      <Route path="/video/:name/:id" component={Page} exact />
+                      <Redirect from="/" to="/page/Home" exact />
+                  </IonRouterOutlet>
+              </IonSplitPane>
+          </IonReactRouter>
+      </IonApp>
   );
 };
+
 
 export default App;

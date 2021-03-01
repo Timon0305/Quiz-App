@@ -1172,7 +1172,7 @@ function display()
             const setUser = (state = {}, action: any) => {
                 state = action.user;
                 return state;
-            }
+            };
             const store = createStore(setUser);
             const setData = (userData: any) => ({
                 type: 'SET_USER',

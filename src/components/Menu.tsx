@@ -10,7 +10,7 @@ import {
     IonButton,
     IonText,
 } from '@ionic/react';
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {
     starOutline,
@@ -29,8 +29,8 @@ import {
 import axios from 'axios';
 import './Menu.css';
 import './Menu.scss';
+import {useDispatch, useStore} from 'react-redux'
 
-import {useStore} from 'react-redux'
 
 interface TrainingPage {
     url: string;
@@ -90,9 +90,8 @@ const formaceoPages: FormaceoPage[] = [
     }
 ];
 
-const Menu: React.FC = () => {
+const Menu: React.FC = (props) =>  {
     const location = useLocation();
-
     const state = useStore().getState();
     let [videoListUrl, setVideoListUrl] = React.useState("/Page/Formations");
     let [quizListUrl, setQuizListUrl] = React.useState("/Page/Quiz");
@@ -126,7 +125,6 @@ const Menu: React.FC = () => {
             navigators.push(quizData[i])
         }
         setTrainingPages(navigators);
-
     }, []);
 
     let button = <IonButton class="btn-premium" expand="block" fill="outline" href="/page/Premium">
