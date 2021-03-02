@@ -53,7 +53,9 @@ const Page: React.FC = () => {
                 return <PremiumView key={shortid.generate()}/>;
             case 'Formations':
                 return <FormationsView key={shortid.generate()}/>;
-            case 'Quiz':
+            case 'quiz&id=2':
+                return <QuizView key={shortid.generate()}/>;
+            case 'quiz&id=9':
                 return <QuizView key={shortid.generate()}/>;
             case 'Quiz&demo=1':
                 return <QuizConnect key={shortid.generate()} />;
@@ -96,9 +98,9 @@ const Page: React.FC = () => {
                 return "Devenir premium";
             case 'Formations':
                 return "Tutoriels vidéos";
-            case 'Quiz':
+            case 'quiz&id=2':
                 return "Quz de formations";
-            case 'Test':
+            case 'quiz&id=9':
                 return "Quz de formations";
             case 'Quiz&demo=1':
                 return "Quz de formations";

@@ -28,39 +28,45 @@ import './QuizView.scss';
 
 const Page: React.FC = () => {
     const state = useStore().getState();
-    let quizData = state.quiz;
-
+    let quizApi = state.quizApi;
     let [promiseResolved, setPromiseResolved] = React.useState(false);
     let [countToDisplay, setCountToDisplay] = React.useState<number>(10);
-    let [dashboard, setDashboard] = React.useState<any>();
+    let [dashboard, setDashboard] = React.useState<any>([]);
     let [countTotal, setCountTotal] = React.useState<number>(1);
     let [quizCount, setQuizCount] = React.useState(0);
+    let [childrenData, setChildrenData] = React.useState<any>([]);
     let quizParentList = [];
     let themes = [];
     let quizUrl = "/Page/Quiz&demo=1";
 
     useEffect(() => {
         setPromiseResolved(true);
-        setQuizCount(quizData.length);
+        // setQuizCount(quizData.length);
 
-        for (let item of quizData) {
-            if (!item.image) {
-                item.image = '/assets/tmp/sos.jpg'
+        let parentId = window.location.pathname.split('id=')[1];
+        axios({
+            method: 'get',
+            url: quizApi + parentId,
+        }).then((resp: any) => {
+            for (let item in resp.data) {
+                // if (!resp[item]) {
+                //     resp[item].image = '/assets/tmp/sos.jpg'
+                // }
             }
-        }
-        setDashboard(quizData[0]);
-        setCountTotal(quizData.length);
-        console.log(state, 'quiz view page =>>>>>>>>....')
+            setDashboard(resp.data);
+            setChildrenData(resp.data);
+            setCountTotal(resp.data.length);
+        })
     }, []);
 
 
     if (promiseResolved) {
         // Quiz List
-        for (let theme in quizData) {
-            const childData = quizData[theme];
-            if (!childData.image) {
-                childData.image = '/assets/tmp/sos.jpg'
-            }
+        for (let theme in childrenData) {
+            const childData = childrenData[theme];
+            // if (!childData.image) {
+            //     childData.image = '/assets/tmp/sos.jpg'
+            // }
             quizParentList.push(
                 <IonCard key={theme} className='pointer' onClick={() => setDashboard(childData)}>
                     <IonCardHeader className='p-0'>
@@ -85,16 +91,17 @@ const Page: React.FC = () => {
 
         // Quiz Sub List
         let i = 0;
-        for (let item in dashboard.children) {
-            let subList = dashboard.children[item];
+        for (let item in dashboard) {
+            let subList = dashboard[item];
             if (!subList.image) {
                 subList.image = '/assets/tmp/tartare.jpg'
             }
             if (i >= countToDisplay) break;
             i++;
         }
+        // console.log(dashboard.data)
         themes.push(
-            <QuizList quiz={dashboard.children} key={'1'}/>
+            <QuizList quiz={dashboard} key={'1'}/>
         );
     }
 
@@ -121,7 +128,12 @@ const Page: React.FC = () => {
                             <IonRow>
                                 <IonCol>
                                     <IonCard className='pointer'>
-                                        <IonImg src={quizData[0]['image']}/>
+                                        {childrenData[0]
+                                        ?
+                                            <IonImg src={childrenData[0]['image']}/>
+                                        :
+                                            <IonImg />
+                                        }
                                         <div className='content'>
                                             <div className='subContent'>
                                                 <IonIcon size='large'/>
@@ -149,17 +161,17 @@ const Page: React.FC = () => {
                     </IonCard>
                 </div>
 
-                <div className='video-resume'>
-                    <h5 className='text-bold'>
-                        Découvrez votre vidéo gratuite
-                        <span className="text-sm text-gray ml-3">{quizCount} quiz</span>
-                    </h5>
-                    <IonRow>
-                        <IonCol class="items-overflow">
-                            {quizParentList}
-                        </IonCol>
-                    </IonRow>
-                </div>
+                {/*<div className='video-resume'>*/}
+                    {/*<h5 className='text-bold'>*/}
+                        {/*Découvrez votre vidéo gratuite*/}
+                        {/*<span className="text-sm text-gray ml-3">{quizCount} quiz</span>*/}
+                    {/*</h5>*/}
+                    {/*<IonRow>*/}
+                        {/*<IonCol class="items-overflow">*/}
+                            {/*{quizParentList}*/}
+                        {/*</IonCol>*/}
+                    {/*</IonRow>*/}
+                {/*</div>*/}
 
             </IonGrid>
 

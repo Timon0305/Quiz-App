@@ -93,9 +93,8 @@ const formaceoPages: FormaceoPage[] = [
 const Menu: React.FC = (props) =>  {
     const location = useLocation();
     const state = useStore().getState();
+    const quizApi = state.quizApi;
     let [videoListUrl, setVideoListUrl] = React.useState("/Page/Formations");
-    let [quizListUrl, setQuizListUrl] = React.useState("/Page/Quiz");
-    let [quizTestUrl, setQuizTestUrl] = React.useState("/Page/Test");
     let [trainingPages, setTrainingPages] = React.useState<TrainingPage[]>([
         {
             title: 'Accueil',
@@ -109,8 +108,6 @@ const Menu: React.FC = (props) =>  {
             iosIcon: videocamOutline,
             mdIcon: videocamOutline
         }]);
-    // let quizApi = state.quizApi;
-    let quizData = state.quiz;
     let navigators: TrainingPage[] = [];
     let [selectedTheme, setSelectedTheme] = React.useState<any>();
 
@@ -118,13 +115,19 @@ const Menu: React.FC = (props) =>  {
         for (let item of trainingPages) {
             navigators.push(item)
         }
-        for (let i = 0; i < quizData.length; i++) {
-            if (i === 0) quizData[0].url = quizListUrl; else quizData[1].url = quizTestUrl;
-            if (i === 0) quizData[0].iosIcon = constructOutline; else quizData[1].iosIcon = trendingUpOutline;
-            if (i === 0) quizData[0].mdIcon = constructOutline; else quizData[1].mdIcon = trendingUpOutline;
-            navigators.push(quizData[i])
-        }
-        setTrainingPages(navigators);
+        axios({
+            method: 'get',
+            url: quizApi + '0'
+        }).then((resp: any) => {
+            let quizData = resp.data;
+            for (let i = 0; i < quizData.length; i++) {
+                if (i === 0) quizData[0].url = "/page/quiz&id=" + quizData[0].id; else quizData[1].url = "/page/quiz&id=" + quizData[1].id;
+                if (i === 0) quizData[0].iosIcon = constructOutline; else quizData[1].iosIcon = trendingUpOutline;
+                if (i === 0) quizData[0].mdIcon = constructOutline; else quizData[1].mdIcon = trendingUpOutline;
+                navigators.push(quizData[i])
+            }
+            setTrainingPages(navigators);
+        })
     }, []);
 
     let button = <IonButton class="btn-premium" expand="block" fill="outline" href="/page/Premium">
@@ -157,7 +160,6 @@ const Menu: React.FC = (props) =>  {
                     <IonListHeader>
                         <IonLabel class="ion-text-uppercase">Ma formation</IonLabel>
                     </IonListHeader>
-
                     {trainingPages.map((trainingPage, index) => {
                         return (
                             <IonMenuToggle key={index} autoHide={false} onClick={() => setSelectedTheme(trainingPage)}>
