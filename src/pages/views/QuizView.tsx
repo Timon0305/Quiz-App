@@ -48,11 +48,6 @@ const Page: React.FC = () => {
             method: 'get',
             url: quizApi + parentId,
         }).then((resp: any) => {
-            for (let item in resp.data) {
-                // if (!resp[item]) {
-                //     resp[item].image = '/assets/tmp/sos.jpg'
-                // }
-            }
             setDashboard(resp.data);
             setChildrenData(resp.data);
             setCountTotal(resp.data.length);
@@ -99,7 +94,6 @@ const Page: React.FC = () => {
             if (i >= countToDisplay) break;
             i++;
         }
-        // console.log(dashboard.data)
         themes.push(
             <QuizList quiz={dashboard} key={'1'}/>
         );

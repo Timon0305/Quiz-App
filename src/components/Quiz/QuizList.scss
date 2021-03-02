@@ -20,7 +20,7 @@
     background-position: center center;
     background-size: cover;
     width: 20px;
-    height: 17px;
+    height: 20px;
   }
   & .subContent5 {
     text-align: center;
@@ -60,6 +60,9 @@
   & .help_image>ion-img {
     width: 21px;
   }
+  & .imageSize {
+    height: 134px!important;
+  }
   & .minHeight {
     height: 180px;
     padding-bottom: 13px;
@@ -72,5 +75,5 @@
     background-position: center center;
     background-size: cover;
     width: 14px;
-    height: 11px;
+    height: 14px;
 }

@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {createContext, useReducer} from 'react';
 import {IonItem, IonRow, IonCol, IonImg, IonText, IonProgressBar, IonIcon, IonCard, IonCardContent} from '@ionic/react';
 import {chevronDownOutline, play, timeOutline} from 'ionicons/icons';
 import QuizElement from './QuizElement';
 import './QuizList.scss'
-
+import {useStore} from "react-redux";
 interface ContainerProps {
     quiz: any;
 }
 
 const ExploreContainer: React.FC<ContainerProps> = ({quiz}) => {
     let [lock, setLock] = React.useState(true);
+    const state = useStore().getState();
     let parentQuiz = [];
     for (let quizId in quiz) {
         let quizElements: any = [];
@@ -19,7 +20,6 @@ const ExploreContainer: React.FC<ContainerProps> = ({quiz}) => {
         quizElements.push(
             <QuizElement cateQuiz={elementChildren} key={quizId} pid={quiz[quizId].id}/>
         );
-
 
         parentQuiz.push(
             <IonItem className='quiz-list' key={quizId}>
@@ -31,11 +31,11 @@ const ExploreContainer: React.FC<ContainerProps> = ({quiz}) => {
                                 <div className='content3'>
                                     {
                                         lock
-                                            ? <div className='subContent3'>
+                                            ? <div className='subContent5'>
                                                 <IonIcon size='small'/>
                                             </div>
                                             :
-                                            <div className='subContent5'>
+                                            <div className='subContent3'>
                                                 <IonIcon size='small'/>
                                             </div>
                                     }

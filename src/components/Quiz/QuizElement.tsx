@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
-import {IonRow, IonCol, IonImg, IonText, IonProgressBar, IonIcon, IonCard, IonCardContent} from '@ionic/react';
-import {play, timeOutline} from 'ionicons/icons';
+import React, {useState, useContext} from 'react';
+import {IonRow, IonCol, IonImg, IonText, IonCard, IonCardContent} from '@ionic/react';
 import {useStore} from "react-redux";
-
+import { createStore } from 'redux'
 interface ContainerProps {
     cateQuiz: any;
     pid: number
 }
 
-const ExploreContainer: React.FC<ContainerProps> = ({cateQuiz, pid}) => {
+const ExploreContainer: React.FC<ContainerProps> = ({cateQuiz, pid,}) => {
     let childrenElement: any = [];
     const state = useStore().getState();
-    let url = undefined;
+    let [selectedQuiz, setSelectedQuiz] = useState<any>([]);
+
     let lockIcon =
         <IonCol class="ion-no-padding">
             <IonImg src="assets/tmp/lock.svg"/>
@@ -22,10 +22,10 @@ const ExploreContainer: React.FC<ContainerProps> = ({cateQuiz, pid}) => {
         </IonCol>;
     for (let i = 0; i <= cateQuiz.length - 1; i++) {
         childrenElement.push(
-            <IonCard href={url} key={i}>
+            <IonCard  key={i} onClick={() => setSelectedQuiz(cateQuiz[i])}>
                 <IonRow>
                     <IonCol class="card-overlay ion-no-padding">
-                        <IonImg
+                        <IonImg className={'imageSize'}
                             src={cateQuiz[i].image ? state.publicUrl + cateQuiz[i].image : '/assets/tmp/recettes-bourdaloue.jpg'}/>
                         <IonRow>
                             {cateQuiz[i].child_count > 0 ? unLockIcon : lockIcon}
@@ -49,6 +49,17 @@ const ExploreContainer: React.FC<ContainerProps> = ({cateQuiz, pid}) => {
         );
 
     }
+    let quiz = selectedQuiz;
+    const setQuiz = (state = {}, action: any) => {
+        state = action.quiz;
+        return state;
+    };
+    const store = createStore(setQuiz);
+    const setData = (setQuiz: any) => ({
+        type: 'SET_QUIZ',
+        id: 0,
+        'quiz': setQuiz});
+    store.dispatch(setData(quiz));
 
     return (
         <>

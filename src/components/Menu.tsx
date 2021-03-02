@@ -10,21 +10,15 @@ import {
     IonButton,
     IonText,
 } from '@ionic/react';
-import React, {useContext, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {
     starOutline,
     homeOutline,
     videocamOutline,
-    medalOutline,
     constructOutline,
-    createOutline,
-    helpCircleOutline,
-    chatboxEllipsesOutline,
-    readerOutline,
     personCircleOutline,
-    personAddOutline,
-    bookOutline, trendingUpOutline, train
+    bookOutline, trendingUpOutline
 } from 'ionicons/icons';
 import axios from 'axios';
 import './Menu.css';
@@ -90,7 +84,7 @@ const formaceoPages: FormaceoPage[] = [
     }
 ];
 
-const Menu: React.FC = (props) =>  {
+const Menu: React.FC = () =>  {
     const location = useLocation();
     const state = useStore().getState();
     const quizApi = state.quizApi;
@@ -109,7 +103,6 @@ const Menu: React.FC = (props) =>  {
             mdIcon: videocamOutline
         }]);
     let navigators: TrainingPage[] = [];
-    let [selectedTheme, setSelectedTheme] = React.useState<any>();
 
     useEffect(() => {
         for (let item of trainingPages) {
@@ -142,15 +135,6 @@ const Menu: React.FC = (props) =>  {
         }
     }
 
-    if (selectedTheme === undefined) {
-        let url = window.location.pathname;
-        for (let item of trainingPages) {
-            if (item.url === url) {
-                setSelectedTheme(item);
-            }
-        }
-    }
-
     return (
         <IonMenu contentId="main" type="overlay">
             <IonContent>
@@ -162,7 +146,7 @@ const Menu: React.FC = (props) =>  {
                     </IonListHeader>
                     {trainingPages.map((trainingPage, index) => {
                         return (
-                            <IonMenuToggle key={index} autoHide={false} onClick={() => setSelectedTheme(trainingPage)}>
+                            <IonMenuToggle key={index} autoHide={false} >
                                 <IonItem className={location.pathname === trainingPage.url ? 'selected' : ''}
                                          routerLink={trainingPage.url} routerDirection="none" lines="none"
                                          detail={false}>
